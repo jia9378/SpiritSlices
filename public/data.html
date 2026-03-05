@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirit Slices — Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="data.css" />
+</head>
+<body>
+
+  <!-- ═══ HUB VIEW — Drinking Frequency Distribution ═══ -->
+  <div id="hub">
+    <!-- Three.js particle cloud -->
+    <canvas id="hub-canvas"></canvas>
+
+    <!-- Title -->
+    <div id="hub-title">
+      <h1>DRINKING FREQUENCY DISTRIBUTION</h1>
+      <p class="meta">SAMPLE: 58,052</p>
+      <p class="meta">CODE: ALCDAYS</p>
+    </div>
+
+    <!-- Data table top-right -->
+    <div id="hub-table">
+      <pre>
+        ======================================================
+          1. DRINKING FREQUENCY DISTRIBUTION  (PAST 30 DAYS)
+        ======================================================
+          CATEGORY                          N        %
+        ------------------------------------------------------
+          NON-DRINKER                  33,614    57.9%
+          LIGHT (1-4 DAYS)             13,107    22.6%
+          MODERATE (5-11 DAYS)          6,160    10.6%
+          HEAVY (12-19 DAYS)            2,306     4.0%
+          VERY HEAVY (20-30 DAYS)       2,865     4.9%
+      </pre>
+    </div>
+
+    <!-- Annotation lines (positioned by CSS) -->
+    <div class="annot" id="annot-0" data-pct="57.9%"><span class="annot-pct">57.9%</span><span class="annot-label">NON-DRINKER</span><span class="annot-line"></span></div>
+    <div class="annot" id="annot-1" data-pct="22.6%"><span class="annot-line"></span><span class="annot-label">LIGHT (1-4 DAYS)</span><span class="annot-pct">22.6%</span></div>
+    <div class="annot" id="annot-2" data-pct="10.6%"><span class="annot-line"></span><span class="annot-label">MODERATE (5-11 DAYS)</span><span class="annot-pct">10.6%</span></div>
+    <div class="annot" id="annot-3" data-pct="4.0%"><span class="annot-line"></span><span class="annot-label">HEAVY (12-19 DAYS)</span><span class="annot-pct">4.0%</span></div>
+    <div class="annot" id="annot-4" data-pct="4.9%"><span class="annot-line"></span><span class="annot-label">VERY HEAVY (20-30 DAYS)</span><span class="annot-pct">4.9%</span></div>
+
+    <!-- Nav buttons — right side -->
+    <div id="hub-nav">
+      <button class="hub-btn" data-layer="1">MOOD DISORDER</button>
+      <button class="hub-btn" data-layer="2">K6 SCORE</button>
+      <button class="hub-btn" data-layer="3">SLEEP TROUBLE</button>
+      <button class="hub-btn" data-layer="4">GREY MATTER</button>
+      <button class="hub-btn submit-btn" id="btn-submit">SUBMIT YOUR DATA</button>
+    </div>
+
+    <!-- Back to brain scan -->
+    <a href="index.html" class="back-link">← Brain Scan</a>
+  </div>
+
+  <!-- ═══ LAYER VIEWS ═══ -->
+  <div id="layer-wrap" class="off">
+    <nav id="layer-nav">
+      <button class="ln-back" id="btn-hub">← DRINKING FREQUENCY</button>
+      <div class="ln-tabs">
+        <button class="ln-tab" data-idx="1">02 Mood Disorder</button>
+        <button class="ln-tab" data-idx="2">03 K6 Distress</button>
+        <button class="ln-tab" data-idx="3">04 Sleep Trouble</button>
+        <button class="ln-tab" data-idx="4">05 Grey Matter</button>
+      </div>
+    </nav>
+    <main id="layer-main">
+
+      <!-- Layer 1: Mood Disorder -->
+      <section class="layer" id="layer-1">
+        <div class="layer-head">
+          <h1>Mood Disorder Prevalence</h1>
+          <p class="meta">SAMPLE: 45,659 · CODE: AMDEYR_BIN · MAJOR DEPRESSIVE EPISODE</p>
+        </div>
+        <div class="fig-row">
+          <div class="fig-cell"><img src="assets/distress/distressCT0.png" alt=""><div class="fig-label">(a) Non-drinker</div></div>
+          <div class="fig-cell"><img src="assets/distress/distressCT1.png" alt=""><div class="fig-label">(b) Light</div></div>
+          <div class="fig-cell"><img src="assets/distress/distressCT2.png" alt=""><div class="fig-label">(c) Moderate</div></div>
+          <div class="fig-cell"><img src="assets/distress/distressCT3.png" alt=""><div class="fig-label">(d) Heavy</div></div>
+          <div class="fig-cell"><img src="assets/distress/distressCT4.png" alt=""><div class="fig-label">(e) Very Heavy</div></div>
+        </div>
+        <div class="fig-caption"><strong>Figure 2.</strong> Axial CT slices illustrating mood disorder prevalence by alcohol consumption category.</div>
+        <figure class="table-fig">
+          <figcaption><strong>Table 2.</strong> Past-year major depressive episode prevalence by drinking frequency.</figcaption>
+          <pre class="data-table">CATEGORY                          N    CASES   PREV %       95% CI
+----------------------------------------------------------------------
+NON-DRINKER                  22,317    2,260    10.13%   [9.7, 10.5]
+LIGHT (1-4 DAYS)             12,126    1,544    12.73%   [12.1, 13.3]
+MODERATE (5-11 DAYS)          5,855      631    10.78%   [10.0, 11.6]
+HEAVY (12-19 DAYS)            2,200      235    10.68%   [9.4, 12.0]
+VERY HEAVY (20-30 DAYS)       2,757      292    10.59%   [9.4, 11.7]</pre>
+        </figure>
+        <div class="bar-section"><div class="bar-chart">
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:79.6%"></div></div><div class="bar-val">10.13%</div><div class="bar-cat">Non-drinker</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:100%"></div></div><div class="bar-val">12.73%</div><div class="bar-cat">Light</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:84.7%"></div></div><div class="bar-val">10.78%</div><div class="bar-cat">Moderate</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:83.9%"></div></div><div class="bar-val">10.68%</div><div class="bar-cat">Heavy</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:83.2%"></div></div><div class="bar-val">10.59%</div><div class="bar-cat">Very Heavy</div></div>
+        </div></div>
+      </section>
+      <!-- Layer 2: K6 Distress -->
+      <section class="layer" id="layer-2" style="display:none">
+        <div class="layer-head">
+          <h1>K6 Psychological Distress</h1>
+          <p class="meta">SAMPLE: 45,619 · SCORE RANGE: 0-24 · HIGHER = MORE DISTRESS</p>
+        </div>
+        <div class="fig-row">
+          <div class="fig-cell"><img src="assets/k6/k6CT0.png" alt=""><div class="fig-label">(a) Non-drinker</div></div>
+          <div class="fig-cell"><img src="assets/k6/k6CT1.png" alt=""><div class="fig-label">(b) Light</div></div>
+          <div class="fig-cell"><img src="assets/k6/k6CT2.png" alt=""><div class="fig-label">(c) Moderate</div></div>
+          <div class="fig-cell"><img src="assets/k6/k6CT3.png" alt=""><div class="fig-label">(d) Heavy</div></div>
+          <div class="fig-cell"><img src="assets/k6/k6CT4.png" alt=""><div class="fig-label">(e) Very Heavy</div></div>
+        </div>
+        <div class="fig-caption"><strong>Figure 3.</strong> K6 psychological distress scores by alcohol consumption category.</div>
+        <figure class="table-fig">
+          <figcaption><strong>Table 3.</strong> Kessler-6 psychological distress scores by drinking frequency.</figcaption>
+          <pre class="data-table">CATEGORY                          N     MEAN   MEDIAN      SD
+----------------------------------------------------------------------
+NON-DRINKER                  22,486     4.90      3.0    5.39
+LIGHT (1-4 DAYS)             12,222     5.47      4.0    5.31
+MODERATE (5-11 DAYS)          5,905     5.24      4.0    4.97
+HEAVY (12-19 DAYS)            2,229     5.39      4.0    5.17
+VERY HEAVY (20-30 DAYS)       2,777     5.32      4.0    5.47</pre>
+        </figure>
+        <div class="bar-section"><div class="bar-chart">
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:89.6%"></div></div><div class="bar-val">4.90</div><div class="bar-cat">Non-drinker</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:100%"></div></div><div class="bar-val">5.47</div><div class="bar-cat">Light</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:95.8%"></div></div><div class="bar-val">5.24</div><div class="bar-cat">Moderate</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:98.5%"></div></div><div class="bar-val">5.39</div><div class="bar-cat">Heavy</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:97.3%"></div></div><div class="bar-val">5.32</div><div class="bar-cat">Very Heavy</div></div>
+        </div></div>
+      </section>
+
+      <!-- Layer 3: Sleep Trouble -->
+      <section class="layer" id="layer-3" style="display:none">
+        <div class="layer-head">
+          <h1>Sleep Trouble</h1>
+          <p class="meta">SAMPLE: 27,275 · CODE: UDALWDSLEEP · DENOMINATOR = ALCOHOL USERS ONLY</p>
+        </div>
+        <div class="fig-row">
+          <div class="fig-cell"><img src="assets/sleep/sleepCT0.png" alt=""><div class="fig-label">(a) Non-drinker</div></div>
+          <div class="fig-cell"><img src="assets/sleep/sleepCT1.jpg" alt=""><div class="fig-label">(b) Light</div></div>
+          <div class="fig-cell"><img src="assets/sleep/sleepCT2.png" alt=""><div class="fig-label">(c) Moderate</div></div>
+          <div class="fig-cell"><img src="assets/sleep/sleepCT3.png" alt=""><div class="fig-label">(d) Heavy</div></div>
+          <div class="fig-cell"><img src="assets/sleep/sleepCT4.png" alt=""><div class="fig-label">(e) Very Heavy</div></div>
+        </div>
+        <div class="fig-caption"><strong>Figure 4.</strong> Sleep trouble prevalence by alcohol consumption category. Prevalence climbs 6× from light to very heavy.</div>
+        <figure class="table-fig">
+          <figcaption><strong>Table 4.</strong> Sleep trouble (alcohol withdrawal symptom) prevalence by drinking frequency.</figcaption>
+          <pre class="data-table">CATEGORY                          N    CASES   PREV %       95% CI
+----------------------------------------------------------------------
+NON-DRINKER                   4,892      303     6.19%   [5.5, 6.9]
+LIGHT (1-4 DAYS)             11,228      403     3.59%   [3.2, 3.9]
+MODERATE (5-11 DAYS)          6,038      454     7.52%   [6.8, 8.2]
+HEAVY (12-19 DAYS)            2,291      290    12.66%   [11.3, 14.0]
+VERY HEAVY (20-30 DAYS)       2,826      590    20.88%   [19.4, 22.4]</pre>
+        </figure>
+        <div class="bar-section"><div class="bar-chart">
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:29.6%"></div></div><div class="bar-val">6.19%</div><div class="bar-cat">Non-drinker</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:17.2%"></div></div><div class="bar-val">3.59%</div><div class="bar-cat">Light</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:36.0%"></div></div><div class="bar-val">7.52%</div><div class="bar-cat">Moderate</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:60.6%"></div></div><div class="bar-val">12.66%</div><div class="bar-cat">Heavy</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:100%"></div></div><div class="bar-val">20.88%</div><div class="bar-cat">Very Heavy</div></div>
+        </div></div>
+      </section>
+
+      
+
+      <!-- Layer 4: Grey Matter -->
+      <section class="layer" id="layer-4" style="display:none">
+        <div class="layer-head">
+          <h1>Grey Matter Volume Change</h1>
+          <p class="meta">DERIVED ESTIMATES · BASED ON DAVIET ET AL. (2022) · UK BIOBANK, N = 36,678</p>
+        </div>
+        <div class="fig-row">
+          <div class="fig-cell"><img src="assets/grey/greyCT0.png" alt=""><div class="fig-label">(a) Non-drinker</div></div>
+          <div class="fig-cell"><img src="assets/grey/greyCT1.png" alt=""><div class="fig-label">(b) Light</div></div>
+          <div class="fig-cell"><img src="assets/grey/greyCT2.png" alt=""><div class="fig-label">(c) Moderate</div></div>
+          <div class="fig-cell"><img src="assets/grey/greyCT3.png" alt=""><div class="fig-label">(d) Heavy</div></div>
+          <div class="fig-cell"><img src="assets/grey/greyCT4.png" alt=""><div class="fig-label">(e) Very Heavy</div></div>
+        </div>
+        <div class="fig-caption"><strong>Reference.</strong> Daviet, R. et al. (2022). Associations between alcohol consumption and gray and white matter volumes in the UK Biobank. <em>Nature Communications</em>, 13, 1175.</div>
+        <figure class="table-fig">
+          <figcaption><strong>Table 5a.</strong> Estimated grey matter volume relative to non-drinker baseline.</figcaption>
+          <pre class="data-table">CATEGORY                     GMV INDEX    Δ FROM BASELINE    AGING EQUIV.
+--------------------------------------------------------------------------
+NON-DRINKER                    100.0%          ref              ref
+LIGHT (1-4 DAYS)                98.8%        −1.2%          +0.5 years
+MODERATE (5-11 DAYS)            96.2%        −3.8%          +2.0 years
+HEAVY (12-19 DAYS)              91.4%        −8.6%          +3.5 years
+VERY HEAVY (20-30 DAYS)         85.3%       −14.7%          +5.5 years</pre>
+        </figure>
+        <figure class="table-fig">
+          <figcaption><strong>Table 5b.</strong> Estimated regional grey matter z-scores (deviation from non-drinker mean).</figcaption>
+          <pre class="data-table">REGION                     LIGHT    MODERATE     HEAVY    V.HEAVY
+------------------------------------------------------------------
+TOTAL GREY MATTER          −0.08      −0.24     −0.52      −0.91
+FRONTAL CORTEX             −0.10      −0.30     −0.65      −1.12
+INSULAR CORTEX             −0.07      −0.22     −0.48      −0.85
+TEMPORAL CORTEX            −0.06      −0.19     −0.41      −0.72
+HIPPOCAMPUS                −0.09      −0.27     −0.58      −1.01
+THALAMUS                   −0.05      −0.16     −0.35      −0.61
+CEREBELLUM                 −0.08      −0.25     −0.54      −0.94
+PARIETAL CORTEX            −0.04      −0.13     −0.28      −0.49</pre>
+        </figure>
+        <div class="bar-section"><div class="bar-chart">
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:0%"></div></div><div class="bar-val">ref</div><div class="bar-cat">Non-drinker</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:8.2%"></div></div><div class="bar-val">−1.2%</div><div class="bar-cat">Light</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:25.9%"></div></div><div class="bar-val">−3.8%</div><div class="bar-cat">Moderate</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:58.5%"></div></div><div class="bar-val">−8.6%</div><div class="bar-cat">Heavy</div></div>
+          <div class="bar-item"><div class="bar-track"><div class="bar-fill" style="height:100%"></div></div><div class="bar-val">−14.7%</div><div class="bar-cat">Very Heavy</div></div>
+        </div></div>
+      </section>
+
+    </main>
+    <footer>
+      <p>Source: NSDUH 2024 — National Survey on Drug Use and Health, SAMHSA. N = 58,633.</p>
+      <p>Grey matter: Daviet et al. (2022). <em>Nature Communications</em>, 13, 1175. doi:10.1038/s41467-022-28735-5</p>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="data.js"></script>
+</body>
+</html>

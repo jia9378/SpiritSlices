@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirit Slices — Volumetric Brain Scan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="c"></canvas>
+
+  <!-- Scan sweep — ethanol molecule with glow -->
+  <div id="scan-line">
+    <div id="scan-glow"></div>
+    <img src="ethanol.svg" alt="" id="ethanol-svg">
+  </div>
+
+  <!-- Top-left info -->
+  <div id="header">
+    <div class="h-title">Spirit Slices</div>
+    <div class="h-sub">Alcohol as a Socially Accepted Addiction</div>
+    <div class="h-sub">We all need something to blame</div>
+    <div class="h-stat">Total respondents: 58,633</div>
+    <div class="h-stat">With alcohol data: 58,052</div>
+    <div class="h-stat">With mood data: 45,659</div>
+    <div class="h-stat">K6 valid pairs: 45,619</div>
+  </div>
+
+  <!-- Top-right actions -->
+  <div id="actions">
+    <button id="btn-replay" class="act-btn">↺ Replay</button>
+  </div>
+
+  <!-- Brain overlay link — appears after scan -->
+  <a href="data.html" id="brain-link">
+    <span class="bl-label">DRINKING FREQUENCY DISTRIBUTION</span>
+    <span class="bl-hint">click to explore data layers →</span>
+  </a>
+
+  <!-- Slice progress dots -->
+  <div id="slice-bar"></div>
+
+  <!-- Controls -->
+  <div id="controls">
+    <div class="ctrl">
+      <span>Threshold</span>
+      <input type="range" id="r-thresh"  min="5"   max="200" value="35" />
+      <span class="val" id="v-thresh">35</span>
+    </div>
+    <div class="ctrl">
+      <span>Depth</span>
+      <input type="range" id="r-depth"   min="60"  max="500" value="220" />
+      <span class="val" id="v-depth">220</span>
+    </div>
+    <div class="ctrl">
+      <span>Point Size</span>
+      <input type="range" id="r-size"    min="1"   max="20"  value="4" />
+      <span class="val" id="v-size">4</span>
+    </div>
+    <div class="ctrl">
+      <span>Opacity</span>
+      <input type="range" id="r-opacity" min="5"   max="100" value="65" />
+      <span class="val" id="v-opacity">65</span>
+    </div>
+    <div class="ctrl">
+      <span>Softness</span>
+      <input type="range" id="r-jitter"  min="0"   max="18"  value="5" />
+      <span class="val" id="v-jitter">5</span>
+    </div>
+    <div class="ctrl">
+      <span>Speed</span>
+      <input type="range" id="r-speed"   min="50"  max="600" value="160" />
+      <span class="val" id="v-speed">160</span>
+    </div>
+  </div>
+
+  <div id="hint">Drag to rotate · Scroll to zoom · ↺ Replay scan</div>
+
+  <!-- Loading overlay -->
+  <div id="loading">
+    <div class="load-title">Loading Scan Data</div>
+    <div id="prog-wrap"><div id="prog-fill"></div></div>
+    <div id="load-pct">0%</div>
+    <div id="load-status"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

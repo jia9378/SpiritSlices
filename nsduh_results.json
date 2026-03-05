@@ -1,0 +1,411 @@
+{
+  "meta": {
+    "source": "NSDUH 2024 Public Use File - SAMHSA",
+    "mood_outcome_var": "AMDEYR_BIN",
+    "k6_items_found": 6,
+    "total_n": 58633,
+    "n_with_alc_data": 58052,
+    "n_with_mood_data": 45659
+  },
+  "drinking_frequency_distribution": [
+    {
+      "category": "Non-drinker",
+      "n": 33614,
+      "percent": 57.9
+    },
+    {
+      "category": "Light (1-4 days)",
+      "n": 13107,
+      "percent": 22.58
+    },
+    {
+      "category": "Moderate (5-11 days)",
+      "n": 6160,
+      "percent": 10.61
+    },
+    {
+      "category": "Heavy (12-19 days)",
+      "n": 2306,
+      "percent": 3.97
+    },
+    {
+      "category": "Very Heavy (20-30 days)",
+      "n": 2865,
+      "percent": 4.94
+    }
+  ],
+  "mood_prevalence_by_alcohol_frequency": [
+    {
+      "category": "Non-drinker",
+      "n": 22317,
+      "n_with_mood_disorder": 2260,
+      "prevalence": 0.1013,
+      "prevalence_percent": 10.13,
+      "ci_95_lower": 9.73,
+      "ci_95_upper": 10.52
+    },
+    {
+      "category": "Light (1-4 days)",
+      "n": 12126,
+      "n_with_mood_disorder": 1544,
+      "prevalence": 0.1273,
+      "prevalence_percent": 12.73,
+      "ci_95_lower": 12.14,
+      "ci_95_upper": 13.33
+    },
+    {
+      "category": "Moderate (5-11 days)",
+      "n": 5855,
+      "n_with_mood_disorder": 631,
+      "prevalence": 0.1078,
+      "prevalence_percent": 10.78,
+      "ci_95_lower": 9.98,
+      "ci_95_upper": 11.57
+    },
+    {
+      "category": "Heavy (12-19 days)",
+      "n": 2200,
+      "n_with_mood_disorder": 235,
+      "prevalence": 0.1068,
+      "prevalence_percent": 10.68,
+      "ci_95_lower": 9.39,
+      "ci_95_upper": 11.97
+    },
+    {
+      "category": "Very Heavy (20-30 days)",
+      "n": 2757,
+      "n_with_mood_disorder": 292,
+      "prevalence": 0.1059,
+      "prevalence_percent": 10.59,
+      "ci_95_lower": 9.44,
+      "ci_95_upper": 11.74
+    }
+  ],
+  "sleep_trouble_by_alcohol_frequency": [
+    {
+      "category": "Non-drinker",
+      "n": 4892,
+      "n_with_sleep_trouble": 303,
+      "prevalence": 0.0619,
+      "prevalence_percent": 6.19,
+      "ci_95_lower": 5.52,
+      "ci_95_upper": 6.87
+    },
+    {
+      "category": "Light (1-4 days)",
+      "n": 11228,
+      "n_with_sleep_trouble": 403,
+      "prevalence": 0.0359,
+      "prevalence_percent": 3.59,
+      "ci_95_lower": 3.25,
+      "ci_95_upper": 3.93
+    },
+    {
+      "category": "Moderate (5-11 days)",
+      "n": 6038,
+      "n_with_sleep_trouble": 454,
+      "prevalence": 0.0752,
+      "prevalence_percent": 7.52,
+      "ci_95_lower": 6.85,
+      "ci_95_upper": 8.18
+    },
+    {
+      "category": "Heavy (12-19 days)",
+      "n": 2291,
+      "n_with_sleep_trouble": 290,
+      "prevalence": 0.1266,
+      "prevalence_percent": 12.66,
+      "ci_95_lower": 11.3,
+      "ci_95_upper": 14.02
+    },
+    {
+      "category": "Very Heavy (20-30 days)",
+      "n": 2826,
+      "n_with_sleep_trouble": 590,
+      "prevalence": 0.2088,
+      "prevalence_percent": 20.88,
+      "ci_95_lower": 19.38,
+      "ci_95_upper": 22.38
+    }
+  ],
+  "k6_score_by_alcohol_frequency": [
+    {
+      "category": "Non-drinker",
+      "n": 22486,
+      "mean": 4.9011,
+      "median": 3.0,
+      "std": 5.3887,
+      "min": 0.0,
+      "max": 24.0
+    },
+    {
+      "category": "Light (1-4 days)",
+      "n": 12222,
+      "mean": 5.4705,
+      "median": 4.0,
+      "std": 5.3064,
+      "min": 0.0,
+      "max": 24.0
+    },
+    {
+      "category": "Moderate (5-11 days)",
+      "n": 5905,
+      "mean": 5.2388,
+      "median": 4.0,
+      "std": 4.9679,
+      "min": 0.0,
+      "max": 24.0
+    },
+    {
+      "category": "Heavy (12-19 days)",
+      "n": 2229,
+      "mean": 5.393,
+      "median": 4.0,
+      "std": 5.1723,
+      "min": 0.0,
+      "max": 24.0
+    },
+    {
+      "category": "Very Heavy (20-30 days)",
+      "n": 2777,
+      "mean": 5.3183,
+      "median": 4.0,
+      "std": 5.4739,
+      "min": 0.0,
+      "max": 24.0
+    }
+  ],
+  "chi_square_test": {
+    "test": "Chi-Square (alcohol frequency category x mood disorder)",
+    "chi2_statistic": 55.6731,
+    "p_value": 0.0,
+    "degrees_of_freedom": 4,
+    "cramers_v": 0.0351,
+    "interpretation": "small",
+    "significant": true
+  },
+  "kruskal_wallis_test": {
+    "test": "Kruskal-Wallis (K6 distress score across alcohol frequency groups)",
+    "H_statistic": 242.1698,
+    "p_value": 0.0,
+    "significant": true
+  },
+  "correlation_drinking_days_vs_k6": {
+    "n": 45619,
+    "pearson_r": 0.0192,
+    "pearson_p": 3.949e-05,
+    "spearman_rho": 0.0629,
+    "spearman_p": 0.0,
+    "significant": true
+  },
+  "logistic_regression": {
+    "formula": "MOOD_OUTCOME ~ ALCDAYS_CLEAN + C(AGE_GRP)",
+    "n": 45255,
+    "pseudo_r2": 0.0235,
+    "aic": 30568.22,
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "coef": -1.6573,
+        "std_err": 0.0242,
+        "z": -68.5632,
+        "p_value": 0.0,
+        "ci_lower": -1.7047,
+        "ci_upper": -1.6099,
+        "significant": true
+      },
+      {
+        "term": "C(AGE_GRP)[T.26-34]",
+        "coef": -0.3382,
+        "std_err": 0.0395,
+        "z": -8.5601,
+        "p_value": 0.0,
+        "ci_lower": -0.4156,
+        "ci_upper": -0.2608,
+        "significant": true
+      },
+      {
+        "term": "C(AGE_GRP)[T.35-49]",
+        "coef": -0.9313,
+        "std_err": 0.0351,
+        "z": -26.5522,
+        "p_value": 0.0,
+        "ci_lower": -1.0001,
+        "ci_upper": -0.8626,
+        "significant": true
+      },
+      {
+        "term": "ALCDAYS_CLEAN",
+        "coef": 0.0083,
+        "std_err": 0.0023,
+        "z": 3.5326,
+        "p_value": 0.000411,
+        "ci_lower": 0.0037,
+        "ci_upper": 0.0128,
+        "significant": true
+      }
+    ]
+  },
+  "mood_prevalence_by_age_and_frequency": [
+    {
+      "age_group": "12-17",
+      "category": "Non-drinker",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "12-17",
+      "category": "Light (1-4 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "12-17",
+      "category": "Moderate (5-11 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "12-17",
+      "category": "Heavy (12-19 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "12-17",
+      "category": "Very Heavy (20-30 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "18-25",
+      "category": "Non-drinker",
+      "n": 7343,
+      "prevalence_percent": 13.67
+    },
+    {
+      "age_group": "18-25",
+      "category": "Light (1-4 days)",
+      "n": 3692,
+      "prevalence_percent": 19.72
+    },
+    {
+      "age_group": "18-25",
+      "category": "Moderate (5-11 days)",
+      "n": 1604,
+      "prevalence_percent": 18.02
+    },
+    {
+      "age_group": "18-25",
+      "category": "Heavy (12-19 days)",
+      "n": 472,
+      "prevalence_percent": 19.92
+    },
+    {
+      "age_group": "18-25",
+      "category": "Very Heavy (20-30 days)",
+      "n": 339,
+      "prevalence_percent": 23.01
+    },
+    {
+      "age_group": "26-34",
+      "category": "Non-drinker",
+      "n": 4143,
+      "prevalence_percent": 10.84
+    },
+    {
+      "age_group": "26-34",
+      "category": "Light (1-4 days)",
+      "n": 2784,
+      "prevalence_percent": 14.55
+    },
+    {
+      "age_group": "26-34",
+      "category": "Moderate (5-11 days)",
+      "n": 1336,
+      "prevalence_percent": 11.98
+    },
+    {
+      "age_group": "26-34",
+      "category": "Heavy (12-19 days)",
+      "n": 486,
+      "prevalence_percent": 11.11
+    },
+    {
+      "age_group": "26-34",
+      "category": "Very Heavy (20-30 days)",
+      "n": 453,
+      "prevalence_percent": 14.13
+    },
+    {
+      "age_group": "35-49",
+      "category": "Non-drinker",
+      "n": 10831,
+      "prevalence_percent": 7.45
+    },
+    {
+      "age_group": "35-49",
+      "category": "Light (1-4 days)",
+      "n": 5650,
+      "prevalence_percent": 7.27
+    },
+    {
+      "age_group": "35-49",
+      "category": "Moderate (5-11 days)",
+      "n": 2915,
+      "prevalence_percent": 6.24
+    },
+    {
+      "age_group": "35-49",
+      "category": "Heavy (12-19 days)",
+      "n": 1242,
+      "prevalence_percent": 7.0
+    },
+    {
+      "age_group": "35-49",
+      "category": "Very Heavy (20-30 days)",
+      "n": 1965,
+      "prevalence_percent": 7.63
+    },
+    {
+      "age_group": "50+",
+      "category": "Non-drinker",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "50+",
+      "category": "Light (1-4 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "50+",
+      "category": "Moderate (5-11 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "50+",
+      "category": "Heavy (12-19 days)",
+      "n": 0,
+      "prevalence_percent": null
+    },
+    {
+      "age_group": "50+",
+      "category": "Very Heavy (20-30 days)",
+      "n": 0,
+      "prevalence_percent": null
+    }
+  ],
+  "past_year_drinking_days_summary": {
+    "n": 58120,
+    "mean": 397.01,
+    "median": 4.0,
+    "std": 486.37,
+    "pct_abstinent": 42.37,
+    "pct_light_1_11": 14.32,
+    "pct_moderate_12_49": 3.02,
+    "pct_frequent_50plus": 40.29
+  }
+}
